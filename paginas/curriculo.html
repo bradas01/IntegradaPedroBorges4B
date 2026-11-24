@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Meu Currículo | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html">Formação Técnica</a></li><li><a href="curriculo.html" aria-current="page">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Apresentação profissional</p><h1>Meu Currículo</h1>
+  <p class="subtitulo">Formação, projetos, competências e certificados.</p>
+  <div class="layout-interno">
+    <!-- COLUNA LATERAL: foto e dados. -->
+    <aside class="menu-lateral perfil-cv">
+      <img class="foto-cv" src="../imagens/perfil/pedro-curriculo.jpg" alt="Foto de Pedro Borges">
+      <h2>Pedro Borges</h2>
+      <p>Estudante do Ensino Médio Técnico em IoT, com interesse em Administração</p>
+      <p><strong>Instituição:</strong> Senac Nações Unidas<br><strong>Turma:</strong> 3IOT04 (3º ano)</p>
+    </aside>
+    <article class="painel-conteudo">
+      <section><h2>Resumo</h2>
+        <p>Estudante do 3º ano do Ensino Médio Técnico em Internet das Coisas, com cinco certificados da Cisco Networking Academy em IoT, redes e cibersegurança. Tive contato com cabos de rede, dispositivos inteligentes, programação e banco de dados.</p>
+        <p>Nos trabalhos em grupo, melhorei a comunicação e a responsabilidade. Quero usar o que aprendi de tecnologia na área administrativa.</p></section>
+      <section><h2>Objetivo</h2>
+        <p>Construir carreira em Administração, desenvolvendo liderança, organização, comunicação e gestão.</p></section>
+      <section><h2>Formação</h2>
+        <ul><li><strong>Ensino Médio Técnico em Internet das Coisas</strong>, Senac Nações Unidas (conclusão prevista em 2026)</li></ul></section>
+      <section><h2>Projetos técnicos</h2>
+        <ul>
+          <li><strong>Maquete com LEDs:</strong> montagem em grupo com circuito de iluminação.</li>
+          <li><strong>Mini Fábrica Inteligente:</strong> ESP32, ESP32-CAM e banco de dados.</li>
+          <li><strong>Sensor de Ré:</strong> Arduino UNO, sensor ultrassônico, LEDs e buzzer para aviso de proximidade.</li>
+          <li><strong>Portfólio:</strong> site com 29 páginas em HTML, CSS e JavaScript.</li>
+        </ul></section>
+      <section><h2>Projetos acadêmicos</h2>
+        <ul>
+          <li><strong>Matemática Financeira:</strong> análise de situações reais de famílias.</li>
+          <li><strong>Estudo de caso do petróleo:</strong> papel de cientistas e analistas técnicos.</li>
+          <li><strong>Projeto de Lei:</strong> proposta escrita em trio.</li>
+          <li><strong>Pressão Estética:</strong> ciência e informação no caso das canetas emagrecedoras.</li>
+          <li><strong>Biografia de Milton Santos:</strong> pesquisa e escrita sobre espaço banal.</li>
+        </ul></section>
+      <section><h2>Visitas técnicas</h2>
+        <ul><li>Sandvik</li><li>HPE (Hewlett Packard Enterprise)</li></ul></section>
+      <section><h2>Competências</h2>
+        <div class="etiquetas"><span class="etiqueta">IoT</span><span class="etiqueta">Redes</span><span class="etiqueta">Cabos de rede</span><span class="etiqueta">Cibersegurança</span><span class="etiqueta">ESP32</span><span class="etiqueta">Java</span><span class="etiqueta">SQL</span><span class="etiqueta">HTML</span><span class="etiqueta">CSS</span></div></section>
+      <section><h2>Habilidades pessoais</h2>
+        <ul><li>Trabalho em equipe</li><li>Comunicação e apresentação de projetos</li><li>Responsabilidade</li><li>Criatividade e resolução de problemas</li></ul></section>
+      <section id="certificados"><h2>Certificados</h2>
+        <!-- CERTIFICADOS -->
+        <div class="grade-cards">
+          <article class="card"><a href="../imagens/certificados/ciberseguranca.jpg"><img class="trabalho" src="../imagens/certificados/ciberseguranca.jpg" alt="Certificado Cisco Networking Academy: Introdução à Cibersegurança"></a><h3>Introdução à Cibersegurança</h3><p>Cisco Networking Academy, concluído em 27/03/2026.</p></article>
+          <article class="card"><a href="../imagens/certificados/iot.jpg"><img class="trabalho" src="../imagens/certificados/iot.jpg" alt="Certificado Cisco Networking Academy: Introdução à IoT e à Transformação Digital"></a><h3>Introdução à IoT e à Transformação Digital</h3><p>Cisco Networking Academy, concluído em 30/11/2025.</p></article>
+          <article class="card"><a href="../imagens/certificados/ameacas.jpg"><img class="trabalho" src="../imagens/certificados/ameacas.jpg" alt="Certificado Cisco Networking Academy: Gerenciamento de Ameaças Cibernéticas"></a><h3>Gerenciamento de Ameaças Cibernéticas</h3><p>Cisco Networking Academy, concluído em 21/09/2025.</p></article>
+          <article class="card"><a href="../imagens/certificados/conceitos-redes.jpg"><img class="trabalho" src="../imagens/certificados/conceitos-redes.jpg" alt="Certificado Cisco Networking Academy: Conceitos Básicos de Redes"></a><h3>Conceitos Básicos de Redes</h3><p>Cisco Networking Academy, concluído em 04/06/2025.</p></article>
+          <article class="card"><a href="../imagens/certificados/defesa-de-rede.jpg"><img class="trabalho" src="../imagens/certificados/defesa-de-rede.jpg" alt="Certificado Cisco Networking Academy: Defesa de Rede"></a><h3>Defesa de Rede</h3><p>Cisco Networking Academy, concluído em 03/06/2025.</p></article>
+        </div></section>
+    </article>
+  </div>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Pedro Borges • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac Nações Unidas</p>
+  <p>Portfólio do Ensino Médio Técnico.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

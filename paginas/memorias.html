@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Memórias | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html" aria-current="page">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Registro visual</p><h1>Minhas Memórias</h1>
+  <p class="subtitulo">Visitas, projetos e experiências em grupo.</p>
+  <!-- CARROSSEL HORIZONTAL: fotos e eventos. -->
+  <section class="carrossel" data-carrossel>
+    <div class="controles-carrossel"><button type="button" data-anterior aria-label="Foto anterior">‹</button><button type="button" data-proximo aria-label="Próxima foto">›</button></div>
+    <div class="carrossel-faixa">
+      <article class="card slide"><img src="../imagens/memorias/turma-visita.jpg" alt="Grupo de estudantes em frente a um prédio com fachada de vidro"><h3>Com a turma</h3><p>Um dos registros com os colegas durante o curso.</p></article>
+      <article class="card slide"><img src="../imagens/memorias/visita-hpe.jpg" alt="Pedro Borges com crachá de visitante em frente a uma sala de servidores"><h3>Visita à HPE</h3><p>Vi servidores de perto.</p></article>
+      <article class="card slide"><img src="../imagens/tecnica/usinagem-cnc.jpg" alt="Máquina de usinagem CNC (imagem ilustrativa)"><h3>Visita à Sandvik</h3><p>Visita técnica do 3º ano. A imagem é ilustrativa.</p></article>
+      <article class="card slide"><img src="../imagens/projetos/maquete-leds.jpg" alt="Maquete com ambientes iluminados por LEDs"><h3>Maquete com LEDs</h3><p>Projeto em grupo com montagem e circuito.</p></article>
+      <article class="card slide"><img src="../imagens/areas/historia.jpg" alt="Pintura com a assinatura do Tratado de Versalhes na Galeria dos Espelhos, em 1919"><h3>Conferência de Paris</h3><p>Simulação feita em Ciências Humanas. A imagem é uma pintura da época.</p></article>
+      <article class="card slide"><img class="trabalho" src="../imagens/trabalhos/artes-mostra.jpg" alt="Título do memorial descritivo da Mostra de Artes 2026"><h3>Mostra de Artes</h3><p>Apresentação de dança registrada em memorial.</p></article>
+    </div>
+  </section>
+  <p>As imagens ilustrativas têm licença livre e estão na página <a href="creditos.html">Créditos das imagens</a>.</p>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Pedro Borges • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac Nações Unidas</p>
+  <p>Portfólio do Ensino Médio Técnico.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

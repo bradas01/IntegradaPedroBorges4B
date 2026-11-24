@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Sensor de Ré | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html" aria-current="page">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow"><a href="formacao-tecnica.html">Formação Técnica</a> / Projeto de IoT</p><h1>Sensor de Ré</h1>
+  <p class="subtitulo">Circuito com Arduino que avisa a distância com luz e som.</p>
+  <!-- APRESENTAÇÃO do projeto. -->
+  <section class="hero">
+    <div><h2>Objetivo</h2><p>Avisar, com luz e som, que existe um obstáculo perto.</p>
+      <h2>Tecnologias</h2>
+      <div class="etiquetas"><span class="etiqueta">Arduino UNO</span><span class="etiqueta">Sensor ultrassônico</span><span class="etiqueta">LEDs</span><span class="etiqueta">Buzzer</span><span class="etiqueta">Arduino IDE</span></div>
+    </div>
+    <img class="hero-foto" src="../imagens/projetos/sensor-circuito.jpg" alt="Circuito na protoboard com sensor ultrassônico, buzzer e LED vermelho aceso">
+  </section>
+  <!-- VÍDEO: circuito e código. -->
+  <section class="card" id="video"><h2>Vídeo do projeto</h2>
+    <p>Demonstração do circuito funcionando, com o LED vermelho aceso, e do código aberto no computador.</p>
+    <video class="video-projeto video-vertical" controls playsinline preload="metadata" poster="../imagens/projetos/sensor-arduino.jpg">
+      <source src="../videos/sensor-de-re.mp4" type="video/mp4">
+      Seu navegador não reproduz este vídeo. <a href="../videos/sensor-de-re.mp4">Abrir o arquivo</a>.
+    </video>
+  </section>
+  <section class="card"><h2>Componentes</h2>
+    <ul class="lista-trabalhos">
+      <li><strong>Arduino UNO:</strong> recebe a leitura e comanda os avisos</li>
+      <li><strong>Sensor ultrassônico:</strong> usa o eco do som para medir</li>
+      <li><strong>Três LEDs:</strong> verde, amarelo e vermelho</li>
+      <li><strong>Buzzer:</strong> parte sonora do alerta</li>
+      <li><strong>Protoboard e fios:</strong> montagem do circuito</li>
+    </ul>
+  </section>
+  <section class="card"><h2>Como funciona</h2>
+    <ol class="lista-trabalhos">
+      <li>O sensor mede a distância pelo tempo de ida e volta do som.</li>
+      <li>O Arduino recebe a medida em centímetros.</li>
+      <li>O programa testa as faixas de distância, uma por vez.</li>
+      <li>Abaixo de <strong>5 cm</strong>, o alerta é o mais forte: LED vermelho e som de 3000 Hz.</li>
+      <li>Se nenhuma faixa se aplica, tudo é desligado.</li>
+    </ol>
+  </section>
+  <!-- CÓDIGO: trecho do programa do Arduino. -->
+  <section class="card" id="codigo"><h2>O código</h2>
+    <p>Parte do programa que aparece no vídeo. A variável <code>distanciaCM</code> decide o que acontece com os LEDs e com o buzzer.</p>
+    <pre><code>else if(distanciaCM &lt; 5) {
+  digitalWrite(ledVermelho, HIGH);
+  tone(buzzer, 3000);
+}
+else {  // desliga todos os LEDs e o buzzer
+  digitalWrite(ledVerde, LOW);
+  digitalWrite(ledAmarelo, LOW);
+  digitalWrite(ledVermelho, LOW);
+  noTone(buzzer);
+}</code></pre>
+    <figure class="figura trabalho">
+      <img src="../imagens/projetos/sensor-codigo.jpg" alt="Tela da Arduino IDE com o código do sensor de ré e a placa Arduino UNO selecionada">
+      <figcaption>Código na Arduino IDE.</figcaption>
+    </figure>
+  </section>
+  <section class="card"><h2>O que aprendi</h2><p>Vi na prática como um sensor, um programa e alguns LEDs funcionam juntos. O código decide o que fazer a partir da distância medida.</p></section>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Pedro Borges • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac Nações Unidas</p>
+  <p>Portfólio do Ensino Médio Técnico.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

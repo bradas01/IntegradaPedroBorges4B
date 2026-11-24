@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Áreas do Saber | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html" aria-current="page">Áreas do Saber</a></li><li><a href="formacao-tecnica.html">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Formação geral</p><h1>Áreas do Saber</h1>
+  <p class="subtitulo">Os conteúdos do Ensino Médio estão separados em quatro áreas. Entre em cada uma para ver as disciplinas e o que aprendi.</p>
+  <!-- CARDS: as quatro áreas do saber. -->
+  <section class="grade-cards">
+    <article class="card"><img src="../imagens/areas/ciencias-natureza.jpg" alt="Folha verde vista de perto"><h3>Ciências da Natureza</h3><p>Seres vivos, química orgânica, petróleo e radiação, em Biologia, Química e Física.</p><a class="botao" href="ciencias-natureza.html">Ver área →</a></article>
+    <article class="card"><img src="../imagens/areas/ciencias-humanas.jpg" alt="Mapa antigo em gomos, usado para montar um globo"><h3>Ciências Humanas</h3><p>Sociedade, espaço, ética e poder, em História, Geografia, Filosofia e Sociologia.</p><a class="botao" href="ciencias-humanas.html">Ver área →</a></article>
+    <article class="card"><img src="../imagens/areas/linguagens.jpg" alt="Máquina de escrever antiga"><h3>Linguagens</h3><p>Leitura, escrita, apresentação, inglês e arte.</p><a class="botao" href="linguagens.html">Ver área →</a></article>
+    <article class="card"><img src="../imagens/areas/matematica-funcoes.jpg" alt="Jato de água alto com arco-íris sobre um lago"><h3>Matemática</h3><p>Dados, finanças, funções, probabilidade e geometria.</p><a class="botao" href="matematica.html">Ver área →</a></article>
+  </section>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Pedro Borges • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac Nações Unidas</p>
+  <p>Portfólio do Ensino Médio Técnico.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

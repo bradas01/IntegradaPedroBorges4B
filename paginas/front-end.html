@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Front-End | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html" aria-current="page">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow"><a href="formacao-tecnica.html">Formação Técnica</a> / Front-End</p><h1>Front-End</h1>
+  <p class="subtitulo">O que cada linguagem faz neste site.</p>
+  <section class="grade-cards">
+    <article class="card"><h3>HTML</h3><p>Define o que é cada parte da página: cabeçalho, menu, seções, imagens e rodapé. As tags <code>section</code>, <code>article</code> e <code>figure</code> dão sentido ao conteúdo.</p><pre><code>&lt;figure&gt;
+  &lt;img src="..." alt="..."&gt;
+  &lt;figcaption&gt;Crédito&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre></article>
+    <article class="card"><h3>CSS</h3><p>Cuida da aparência. O Grid distribui os cards, o Flexbox alinha o menu e as variáveis guardam as cores.</p><pre><code>.grade-cards {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+}</code></pre></article>
+    <article class="card"><h3>JavaScript</h3><p>Responde aos cliques: abre o menu no celular e movimenta os carrosséis.</p><pre><code>botaoMenu.addEventListener("click", function () {
+  menu.classList.toggle("aberto");
+});</code></pre></article>
+  </section>
+  <section class="card"><h2>Meu projeto: este portfólio</h2>
+    <p>São 29 páginas com o mesmo cabeçalho, o mesmo rodapé e um único arquivo de estilo. A estrutura parte do modelo apresentado em aula e foi organizada com as minhas áreas, projetos, fotos e certificados.</p>
+    <p>As imagens ficam separadas por assunto, e o layout se ajusta ao computador e ao celular.</p>
+  </section>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Pedro Borges • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac Nações Unidas</p>
+  <p>Portfólio do Ensino Médio Técnico.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

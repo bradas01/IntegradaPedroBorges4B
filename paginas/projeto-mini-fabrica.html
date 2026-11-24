@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Mini Fábrica Inteligente | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html" aria-current="page">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow"><a href="formacao-tecnica.html">Formação Técnica</a> / Projeto de IoT</p><h1>Mini Fábrica Inteligente</h1>
+  <p class="subtitulo">Esteira com detecção de cores, banco de dados e painel de acompanhamento.</p>
+  <!-- APRESENTAÇÃO do projeto. -->
+  <section class="hero">
+    <div><h2>O desafio</h2><p>Fazer uma linha de produção pequena que registra cada objeto que passa.</p>
+      <h2>Objetivo</h2><p>Detectar a cor dos objetos na esteira, guardar os registros e mostrar os resultados em um painel simples de consultar.</p>
+      <div class="etiquetas"><span class="etiqueta">ESP32</span><span class="etiqueta">ESP32-CAM</span><span class="etiqueta">Banco de dados</span><span class="etiqueta">Painel web</span><span class="etiqueta">Trabalho em equipe</span></div>
+    </div>
+    <img class="hero-foto" src="../imagens/projetos/esteira.jpg" alt="Esteira do projeto, com motor amarelo, fios e bateria">
+  </section>
+  <!-- VÍDEO: teste da esteira com o painel no celular. -->
+  <section class="card" id="video"><h2>Vídeo do projeto</h2>
+    <p>Demonstração do projeto em grupo: os objetos passam pela esteira, e o painel "IoT Sorting" mostra as detecções no celular.</p>
+    <video class="video-projeto" controls playsinline preload="metadata" poster="../imagens/projetos/painel-resumo.jpg">
+      <source src="../videos/esteira-banco-de-dados.mp4" type="video/mp4">
+      Seu navegador não reproduz este vídeo. <a href="../videos/esteira-banco-de-dados.mp4">Abrir o arquivo</a>.
+    </video>
+  </section>
+  <section class="card"><h2>Como funciona</h2>
+    <ol class="lista-trabalhos">
+      <li>A esteira leva o objeto.</li>
+      <li>O dispositivo <strong>ESP32CAM-001</strong>, chamado de Esteira Principal, participa da identificação da cor.</li>
+      <li>Cada detecção vira um registro com horário, cor, confiança e origem.</li>
+      <li>Os números e o gráfico do painel acompanham os novos registros.</li>
+    </ol>
+  </section>
+  <!-- PAINEL: telas do sistema no celular. -->
+  <section class="card" id="painel"><h2>Painel "IoT Sorting"</h2>
+    <ul class="lista-trabalhos">
+      <li>Situação da esteira e do ESP32</li>
+      <li>Quantidade de objetos no dia e por cor</li>
+      <li>Gráfico de distribuição</li>
+      <li>Informações da última conexão e da última detecção</li>
+      <li>Cadastro de novos dispositivos</li>
+    </ul>
+    <div class="grade-cards telas">
+      <figure><img src="../imagens/projetos/painel-resumo.jpg" alt="Painel no celular com 4 objetos no dia e a contagem de vermelhos, verdes e azuis"><figcaption>Resumo do dia</figcaption></figure>
+      <figure><img src="../imagens/projetos/painel-cores.jpg" alt="Painel no celular com o gráfico de distribuição das cores e os dados do dispositivo"><figcaption>Distribuição das cores e dispositivo</figcaption></figure>
+      <figure><img src="../imagens/projetos/painel-deteccoes.jpg" alt="Painel no celular com a tabela das últimas detecções: azul, vermelho, branco e preto"><figcaption>Últimas detecções</figcaption></figure>
+    </div>
+    <p>Foram usados quatro objetos: <strong>preto, branco, vermelho e azul</strong>. Ao final, o painel indicava 4 objetos no dia, cada um com a sua cor na lista de detecções.</p>
+  </section>
+  <section class="card" id="banco-de-dados"><h2>O banco de dados</h2>
+    <p>Pelos campos que aparecem na tela, um modelo possível tem duas tabelas, dispositivo e detecção, ligadas pelo código do dispositivo. Assim, os dados do dispositivo não se repetem em cada registro.</p>
+    <div class="tabela-rolavel">
+      <table class="tabela-creditos">
+        <thead><tr><th>Tabela</th><th>Campos</th></tr></thead>
+        <tbody>
+          <tr><td>dispositivo</td><td>código, nome, endereço IP, status, última conexão</td></tr>
+          <tr><td>detecção</td><td>horário, cor, confiança, código do dispositivo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Exemplo de consulta para listar as detecções mais recentes primeiro:</p>
+    <pre><code>SELECT horario, cor, confianca
+FROM deteccao
+ORDER BY horario DESC;</code></pre>
+  </section>
+  <section class="card"><h2>O que aprendi</h2><p>Com os dados da esteira, dá para saber quantos objetos passaram sem contar um por um. Numa empresa, isso ajuda a controlar a produção.</p></section>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Pedro Borges • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac Nações Unidas</p>
+  <p>Portfólio do Ensino Médio Técnico.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>
